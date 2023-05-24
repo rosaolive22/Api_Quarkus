@@ -1,4 +1,4 @@
-package org.acme.dto.enun;
+package org.acme.enun;
 
 public enum Culture {
     HOTALIÇAS,

@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.extern.jackson.Jacksonized;
-import org.acme.dto.enun.Culture;
+import org.acme.enun.Culture;
 import org.acme.entity.ProductEntity;
 
 import java.math.BigDecimal;
