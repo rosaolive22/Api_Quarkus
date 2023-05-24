@@ -28,6 +28,15 @@ public class CustomerService {
             customerRepository.persist(mapCustomerDtoToEntity(customerDTO));
         }
 
+
+
+//Relacionamento com o microserviço Order
+public CustomertDTO findCustomersById(Long id){
+    return mapCustomerEntityToDTO(customertRepository.findById(id));
+}
+
+
+
 //Faz alterações de informações
     public void changeCustomer(Long id, CustomerDTO customerDTO){
 

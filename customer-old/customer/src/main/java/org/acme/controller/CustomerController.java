@@ -16,12 +16,27 @@ public class CustomerController {
 
     @Inject
     CustomerService customerService;
+
     @GET
-    @RolesAllowed("manager")
+    //@RolesAllowed("manager")
     @Produces(MediaType.APPLICATION_JSON)
     public List<CustomerDTO> finAllCustomers(){
         return customerService.findAllCustomers();
     }
+
+    
+
+//Relacionamento com o microsserviço Order
+    @GET
+    @Path("/{id}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public CustomerDTO findCustomertById(@PathParam("id")Long id) {
+        return customerService.findAllCustomersById(id);
+    }
+    
+
+
+
     @POST
     @RolesAllowed("manager")
     @Transactional//toda vez que for alterar algum dado
